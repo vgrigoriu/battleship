@@ -1,4 +1,4 @@
-﻿# Battleship
+# Battleship
 The game is played on four grids, two for each player. The grids are typically square – usually
 10 × 10 – and the individual squares in the grid are identified by letter and number.
 On one grid the player arranges ships and records the shots by the opponent. On the other grid
