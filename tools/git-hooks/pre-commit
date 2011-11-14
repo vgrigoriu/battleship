@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# this file needs to have Unix line endings (i.e. just \n)
+exec powershell -noprofile -file .git/hooks/pre-commit.ps1

@@ -1,0 +1,14 @@
+<!-- normal projects -->
+  <Import Project="..\..\..\tools\StyleCop\4.6\StyleCop.Targets" />
+  <UsingTask AssemblyFile="..\..\..\tools\FxCop\MsBuild\FxCopTask.dll" TaskName="FxCop" />
+  <Target Name="VerifyCommit">
+    <!--MSBuild Projects="PMSD.csproj" Targets="Build" Properties="StyleCopTreatErrorsAsWarnings=false" /-->
+    <FxCop Assemblies="$(TargetPath)" Executable="..\..\..\tools\FxCop\FxCopCmd.exe" RuleSetDirectory="..\..\..\tools\FxCop\Rules" />
+  </Target>
+
+<!-- test projects -->  
+  <Import Project="..\..\..\tools\StyleCop\4.6\StyleCop.Targets" />
+  <UsingTask AssemblyFile="..\..\..\tools\xUnit\xunit.runner.msbuild.dll" TaskName="Xunit.Runner.MSBuild.xunit" />
+  <Target Name="VerifyCommit">
+    <xunit Assembly="$(TargetPath)" />
+  </Target>
